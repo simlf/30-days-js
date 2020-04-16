@@ -96,20 +96,30 @@
   </div>
 
 <script>
-  const task = document.querySelector('.item');
+const tasks = document.querySelectorAll('.inbox input[type="checkbox"]');
 
-// function multipleChecks() {
-//   if ()
-// }
-const click = task.addEventListener('input', event => {
-    console.log(event);
-  });
-// console.log(click);
-  task.addEventListener('keydown', event => {
-    if (event.key === 'Shift') {
-    console.log('heye');
-    }
-  });
+let lastChecked;
+
+function handleCheck(event) {
+  let inBetween = false;
+
+  if (event.shiftKey && this.checked) {
+    tasks.forEach(task => {
+
+      if (task === this || task === lastChecked) {
+        inBetween = !inBetween;
+      }
+
+      if (inBetween) {
+        task.checked = true;
+      }
+    });
+  }
+
+  lastChecked = this;
+}
+
+tasks.forEach(task => task.addEventListener('click', handleCheck));
 </script>
 </body>
 </html>
