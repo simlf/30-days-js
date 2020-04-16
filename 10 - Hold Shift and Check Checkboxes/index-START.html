@@ -96,6 +96,20 @@
   </div>
 
 <script>
+  const task = document.querySelector('.item');
+
+// function multipleChecks() {
+//   if ()
+// }
+const click = task.addEventListener('input', event => {
+    console.log(event);
+  });
+// console.log(click);
+  task.addEventListener('keydown', event => {
+    if (event.key === 'Shift') {
+    console.log('heye');
+    }
+  });
 </script>
 </body>
 </html>
