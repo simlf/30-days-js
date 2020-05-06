@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  background: url('http://wes.io/hx9M/oh-la-la.jpg') center no-repeat;
+  background: url('https://picsum.photos/600/600') center no-repeat;
   background-size: cover;
   min-height: 100vh;
   display: flex;
@@ -11,7 +11,7 @@ html {
 }
 
 *, *:before, *:after {
-  box-sizing: inherit; 
+  box-sizing: inherit;
 }
 
 svg {
